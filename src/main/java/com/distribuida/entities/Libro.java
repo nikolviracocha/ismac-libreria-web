@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -32,8 +33,8 @@ public class Libro {
 			private int numPaginas;
 			@Column(name = "edicion")
 			private String edicion;
-			@Column(name = "idioma")
 			private String idioma;
+			@DateTimeFormat(pattern= "yyyy-MM-dd")
 			@Column(name = "fecha_publicacion")
 			private Date fechaPublicacion;
 			private String descripcion;
@@ -67,7 +68,7 @@ public class Libro {
 			
 			public Libro() {}
 				
-				public Libro(int idLibro, String titutlo, String editorial, int numPaginas, String edicion, String idioma,
+				public Libro(int idLibro, String titulo, String editorial, int numPaginas, String edicion, String idioma,
 					Date fechaPublicacion, String descripcion, String tipoPasta, String iSBN, int numEjemplares,
 					String portada, String presentacion, double precio) {
 				
@@ -110,8 +111,8 @@ public class Libro {
 
 
 
-			public void setTitulo(String titutlo) {
-				this.titulo = titutlo;
+			public void setTitulo(String titulo) {
+				this.titulo = titulo;
 			}
 
 
@@ -284,7 +285,7 @@ public class Libro {
 			
 			@Override
 			public String toString() {
-			return "Libro [idLibro=" + idLibro + ", titutlo=" + titulo + ", editorial=" + editorial + ", numPaginas="
+			return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", numPaginas="
 			+ numPaginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fechaPublicacion="
 			+ fechaPublicacion + ", descripcion=" + descripcion + ", tipoPpasta=" + tipoPasta + ", ISBN="
 			+ ISBN + ", numEjemplares=" + numEjemplares + ", portada=" + portada + ", presentacion="
