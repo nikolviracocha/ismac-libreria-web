@@ -12,29 +12,29 @@ import org.springframework.stereotype.Component;
 @Component
 @Entity
 @Table(name ="Categoria")
-public class categoria {
+public class Categoria {
 	
 	// Atributos
 			@Id
 			@GeneratedValue(strategy =  GenerationType.IDENTITY)
 			@Column(name="id_categoria")
-			private String idcategoria;
+			private int idCategoria;
 			@Column(name="categoria")
 			private String categoria;
 			
 		// Constructor 
-			public categoria() {}
+			public Categoria() {}
 			
-			public categoria(String idcategoria, String categoria) {
-				super();
-				this.idcategoria = idcategoria;
+			public Categoria(int idcategoria, String categoria) {
+				
+				this.idCategoria = idcategoria;
 				this.categoria = categoria;
 			}
-			public String getIdcategoria() {
-				return idcategoria;
+			public int getIdCategoria() {
+				return idCategoria;
 			}
-			public void setIdcategoria(String idcategoria) {
-				this.idcategoria = idcategoria;
+			public void setIdCategoria(int idcategoria) {
+				this.idCategoria = idcategoria;
 			}
 			public String getCategoria() {
 				return categoria;
@@ -44,6 +44,6 @@ public class categoria {
 			}
 			@Override
 			public String toString() {
-				return "categoria [idcategoria=" + idcategoria + ", categoria=" + categoria + "]";
+				return "Categoria [idCategoria=" + idCategoria + ", categoria=" + categoria + "]";
 			}
 	}

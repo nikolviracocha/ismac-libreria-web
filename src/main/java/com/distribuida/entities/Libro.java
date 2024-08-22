@@ -55,7 +55,7 @@ public class Libro {
 			
 			@JoinColumn(name ="id_categoria")		
 			@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-			private categoria categoria;
+			private Categoria categoria;
 			
 			@JoinColumn(name ="id_Autor")
 			@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
@@ -261,13 +261,13 @@ public class Libro {
 
 
 
-			public categoria getCategoria() {
+			public Categoria getCategoria() {
 				return categoria;
 			}
 
 
 
-			public void setCategoria(categoria categoria) {
+			public void setCategoria(Categoria categoria) {
 				this.categoria = categoria;
 			}
 

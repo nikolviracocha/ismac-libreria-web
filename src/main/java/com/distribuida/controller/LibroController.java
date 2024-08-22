@@ -75,8 +75,8 @@ public class LibroController {
 	                  @RequestParam("portada") @Nullable String portada,
 	                  @RequestParam("presentacion") @Nullable String presentacion,
 	                  @RequestParam("precio") @Nullable Double precio,
-	                  @RequestParam("idcategoria") @Nullable Integer idCategoria,
-	                  @RequestParam("idautor") @Nullable Integer idAutor) {
+	                  @RequestParam("idCategoria") @Nullable Integer idCategoria,
+	                  @RequestParam("idAutor") @Nullable Integer idAutor) {
 		
 		if (idLibro == null) {
 			Libro libro = new Libro(0, titulo, editorial, numPaginas, edicion, idioma, fechaPublicacion, descripcion, tipoPasta, ISBN, numEjemplares, portada, presentacion, precio);

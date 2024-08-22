@@ -62,27 +62,22 @@
     
     <label for="precio">Precio</label>
     <input type="text" id="precio" name="precio" value="${libro.precio}" pattern="^\d+(\.\d{1,2})?$">
-    <br/>
-    
-    <label for="idcategoria">Categoría</label>
-    <select id="idcategoria" name="idcategoria">
-        <c:forEach var="item" items="${categorias}">
-            <option value="${item.idcategoria}" ${item.idcategoria == libro.categoria.idCategoria ? 'selected' : ''}>
-                ${item.categoria}
-            </option>
-        </c:forEach>
-    </select>
-    <br/>
-    
-    <label for="idautor">Autor</label>
-    <select id="idautor" name="idautor">
-        <c:forEach var="item" items="${autores}">
-            <option value="${item.idAutor}" ${item.idAutor == libro.autor.idAutor ? 'selected' : ''}>
-                ${item.nombre} ${item.apellido}
-            </option>
-        </c:forEach>
-    </select>
-    <br/>
+   <br/>
+		Categoria
+		<select id="idCategoria" name="idCategoria">			
+			<c:forEach var="item" items="${categorias}">
+				<option value="${item.idCategoria}" ${item.idCategoria == libro.categoria.idCategoria ? 'selected' : '' } > ${item.categoria} </option>
+			</c:forEach>					
+		</select>
+			
+		<br/>
+		Autor
+		<select id="idAutor" name="idAutor">
+			<c:forEach var="item" items="${autores}">
+				<option value="${item.idAutor}"  ${item.idAutor == libro.autor.idAutor ? 'selected' : ''} > ${item.nombre} ${item.apellido} </option>
+			</c:forEach>			
+		</select>	
+		<br/>
     
     <button type="submit">Guardar</button>  
     <button type="button" onclick="window.location.href='${pageContext.request.contextPath}/libros/findAll';">Cancelar</button>

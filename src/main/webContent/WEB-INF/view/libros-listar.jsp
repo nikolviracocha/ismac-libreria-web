@@ -6,15 +6,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Lista de Libros</title>
+<meta charset="UTF-8">
+<title>SISTEMA LIBRERIA</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css" />
 </head>
 <body>
 
     <h1>Libros</h1>
     
-   <button onclick="window.location.href='/ismac-libreria-web/libros/findOne?opcion=1'; return false;">Agregar</button>
-   
+    <div class="container" style="text-align: center;">
+   <button class="btn btn-primary" onclick="window.location.href='/ismac-libreria-web/libros/findOne?opcion=1'; return false;">
+   Agregar
+   </button>
+   </div>
  
    <table>
     <thead>
@@ -70,4 +75,24 @@
         </c:forEach>
     </tbody>
 </table>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap-table-es-MX.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    

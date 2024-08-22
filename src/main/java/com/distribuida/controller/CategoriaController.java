@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.distribuida.dao.CategoriaDAO;
-import com.distribuida.entities.categoria;
+import com.distribuida.entities.Categoria;
 
 @Controller
 @RequestMapping("/Categoria")                 //path principal
@@ -30,7 +30,7 @@ public class CategoriaController {
 		
 		//try {
 		
-		List<categoria> Categorias = CategoriaDAO.findALL();
+		List<Categoria> Categorias = CategoriaDAO.findALL();
 		
 		model.addAttribute("Categorias", Categorias);
 		
@@ -51,7 +51,7 @@ public class CategoriaController {
 		//try {
 
 		if(idCategoria != null) {
-			categoria Categoria = CategoriaDAO.findOne(idCategoria);
+			Categoria Categoria = CategoriaDAO.findOne(idCategoria);
 			model.addAttribute("Categoria", Categoria);	
 		}
 		
@@ -73,12 +73,12 @@ public class CategoriaController {
 		//try {
 
 		if(idcategoria == null) {
-			categoria categoria1 = new categoria();
+			Categoria categoria1 = new Categoria();
 		CategoriaDAO.add(categoria1);
 		
 		}else {
 			
-			categoria Categoria2 = new categoria();
+			Categoria Categoria2 = new Categoria();
 		CategoriaDAO.up(Categoria2);	
 		}
 		return "redirect:/Categorias/findAll";
